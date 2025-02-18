@@ -38,7 +38,7 @@ the Payment class in bin/payment_class.dart.
 the Cash payment class in bin/cash_payment_class.dart.                
 the Credit card payment class in bin/credit_card_payment_class.dart.                
 the User class in bin/user_class.dart.                         
-My output screenshot in the images folder.
+**My output screenshot in the images folder.**
 
 # How to run
 
