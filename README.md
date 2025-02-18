@@ -12,7 +12,7 @@ While Applying SOLID principles to it.
 
 # Explanation
 
-The **Payment Class** is an abstract class which has payAmount method to pay the amount.
+The **Payment Class** is an abstract class which has payAmount abstract method to pay the amount.
 We separate cash payment and credit card payment into two different classes to achieve single
 responsibility principle and interface segregation principle.
 
@@ -21,15 +21,26 @@ The payment method prints a simple message of 'Cash payment of <amount> done suc
 
 The **Credit Card Payment Class** implements the Payment class and overrides the payAmount method.
 The payment method prints a simple message of 'Payment of $amount using credit card done
-successfully!' .
+successfully!'.
 
-The **User Class** is a class which the user uses to checkout .
+So, the two classes applies liskov substitution principle.
+
+The **User Class** is a class which the user uses to checkout. it has checkout method which
+accepts the amount and calls the payAmount method of the Payment class.
+The user constructor accepts the Payment class as a parameter which we can send to it any payment
+method class like cash payment or credit card payment.
+So, it depends on abstraction not concrete implementation of certain payment method (Dependency
+Inversion).
+
+So, we apply Open closed principle while we can add new payment method without
+modifying User class.
 
 Then, in main file:                    
 We create an instance of the Cash payment class and Credit card payment class.
-Then, We create two instance of the User class and call the checkout method using dependency injection.
+Then, we create two instance of the User class and pass to one user (Cash payment object) and
+the other user Credit card payment object.
 User1 uses Cash payment and user2 uses Credit card payment.
-And then prints the output using checkout method in user object.
+And then prints the output using checkout method in the two user objects.
 
 # Structure
 
