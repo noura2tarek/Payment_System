@@ -17,10 +17,10 @@ We separate cash payment and credit card payment into two different classes to a
 responsibility principle and interface segregation principle.             
 
 The **Cash Payment Class** implements the Payment class and overrides the payAmount method.         
-The payment method prints a simple message of 'Cash payment of <amount> done successfully!'.
+The payAmount method prints a simple message of 'Cash payment of $amount done successfully!'.
 
 The **Credit Card Payment Class** implements the Payment class and overrides the payAmount method.          
-The payment method prints a simple message of 'Payment of $amount using credit card done
+The payAmount method prints a simple message of 'Payment of $amount using credit card done
 successfully!'.          
 
 So, the two classes applies liskov substitution principle.               
